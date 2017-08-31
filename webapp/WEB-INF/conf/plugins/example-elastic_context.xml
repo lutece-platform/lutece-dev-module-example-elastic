@@ -4,6 +4,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" >
 
-
+	<bean id="example-elastic.elasticProjectDAO" class="fr.paris.lutece.plugins.example.modules.elastic.elasticdata.ElasticProjectDao"/>
+	
+    <bean id="example-elastic.extendProjectDAO" class="fr.paris.lutece.plugins.example.modules.elastic.extend.ExtendProjectDao"/>
+	
+	<bean id="example-elastic.dataSource" class="fr.paris.lutece.plugins.example.modules.elastic.elasticdata.ProjectDataSource" >
+           <property name="id" value="ProjectDataSource" />
+           <property name="name" value="Project Data Source" />
+           <property name="targetIndexName" value="projectdatasource" />
+           <property name="dataType" value="projectdataobject" />
+       </bean>
+	   
+	   <bean id="example-elastic.dataSource2" class="fr.paris.lutece.plugins.example.modules.elastic.extend.ExtendProjectDataSource" >
+           <property name="id" value="ProjectDataSource2" />
+           <property name="name" value="Data Source Extend : Nb Hits" />
+           <property name="targetIndexName" value="projectdatasource2" />
+           <property name="dataType" value="projectdataobject2" />
+       </bean>
 
 </beans>
