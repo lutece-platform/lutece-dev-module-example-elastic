@@ -1,0 +1,20 @@
+<#include "manageproject_tabs.html" />
+<@tabs2 tab="project" />
+
+<@box>
+	<@boxHeader title='#i18n{module.example.elastic.modify_project.title}' />
+	<@boxBody>
+    <@tform class="form-horizontal" method="post" name="modify_project" action="jsp/admin/plugins/example/modules/elastic/ManageProjects.jsp">
+			<@messages errors=errors />
+			<input type="hidden" id="id" name="id" value="${project.id}"/>
+			
+				<@formGroup labelKey='#i18n{module.example.elastic.modify_project.labelName}' helpKey='#i18n{module.example.elastic.modify_project.labelName.help}' mandatory=true>
+					<@input type='text' name='name' value='${project.name}' />
+				</@formGroup>
+				<@formGroup labelKey='#i18n{module.example.elastic.modify_project.labelCout}' helpKey='#i18n{module.example.elastic.modify_project.labelCout.help}' mandatory=true>
+					<@input type='text' name='cout' value='${project.cout}' />
+				</@formGroup>
+        <@actionButtons button1Name="action_modifyProject" button2Name="view_manageProject"/>
+    </@tform>
+	</@boxBody>
+</@box>

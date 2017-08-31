@@ -19,13 +19,6 @@
         <max-core-version/>	
     </core-version-dependency>
 
-    <!-- Admin features parameters -->
-    <admin-features>
-    </admin-features>    
-
-    <!-- XPages parameters -->
-    <applications>
-    </applications>
 
     <!-- Portlet parameters -->
     <portlets>

@@ -1,0 +1,28 @@
+<#include "project_tabs.html" />
+<@tabs2 tab="project" />
+
+<@row>
+	<@columns>
+		<@tform class='form-horizontal' action='jsp/site/Portal.jsp?page=project'>
+			<fieldset>
+				<legend>#i18n{module.example.elastic.modify_project.title}</legend>
+				<@messages errors=errors />
+				<input type="hidden" id="id" name="id" value="${project.id}"/>
+				
+				<@formGroup labelFor='name' labelKey='#i18n{module.example.elastic.modify_project.labelName}' mandatory=true>
+          <@input type='text' id='name' name='name'  maxlength=50 value='${project.name}' tabIndex='0' />
+				</@formGroup>
+				<@formGroup labelFor='cout' labelKey='#i18n{module.example.elastic.modify_project.labelCout}' mandatory=true>
+          <@input type='text' id='cout' name='cout'  value='${project.cout}' tabIndex='1' />
+				</@formGroup>
+
+				<@formGroup>
+          <@button name='action_modifyProject' type='submit' tabIndex='2' title='#i18n{portal.util.labelModify}' buttonIcon='plus' />
+          <@button name='view_manageProjects' type='submit' title='#i18n{portal.util.labelCancel}' buttonIcon='close' color='btn-secondary' />
+				</@formGroup>
+        </fieldset>
+		</@tform>
+	</@columns>
+</@row>
+
+  

@@ -1,0 +1,21 @@
+<#include "manageproject_tabs.html" />
+<@tabs2 tab="project" />
+<@box>
+	<@boxHeader title='#i18n{module.example.elastic.create_project.title}' />
+	<@boxBody>
+    <@tform name='create_project' action='jsp/admin/plugins/example/modules/elastic/ManageProjects.jsp'>
+
+        <@messages errors=errors />
+        <input type="hidden" id="id" name="id"/>
+        
+				<@formGroup labelKey='#i18n{module.example.elastic.create_project.labelName}' helpKey='#i18n{module.example.elastic.create_project.labelName.help}' mandatory=true>
+					<@input type='text' name='name' value='${project.name!\'\'}' />
+				</@formGroup>
+				<@formGroup labelKey='#i18n{module.example.elastic.create_project.labelCout}' helpKey='#i18n{module.example.elastic.create_project.labelCout.help}' mandatory=true>
+					<@input type='text' name='cout' value='${project.cout!\'\'}' />
+				</@formGroup>
+				
+				<@actionButtons button1Name="action_createProject" button2Name="view_manageProject"/>
+    </@tform>
+	</@boxBody>
+</@box>

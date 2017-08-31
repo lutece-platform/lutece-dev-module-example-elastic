@@ -1,0 +1,27 @@
+<#include "project_tabs.html" />
+<@tabs2 tab="project" />
+
+<@row>
+	<@columns>
+		<@tform class='form-horizontal' action='jsp/site/Portal.jsp?page=project'>
+			<fieldset>
+				<legend>#i18n{module.example.elastic.create_project.title}</legend>
+				<@messages errors=errors />
+				<input type="hidden" id="id" name="id"/>  
+				
+          <@formGroup labelFor='name' labelKey='#i18n{module.example.elastic.create_project.labelName}' helpKey='#i18n{module.example.elastic.create_project.labelName.help}' mandatory=true>
+						<@input type="text" id="name" name="name" value="${project.name!''}"  maxlength=50 tabIndex="0" />
+					</@formGroup>
+          <@formGroup labelFor='cout' labelKey='#i18n{module.example.elastic.create_project.labelCout}' helpKey='#i18n{module.example.elastic.create_project.labelCout.help}' mandatory=true>
+						<@input type="text" id="cout" name="cout" value="${project.cout!''}"  tabIndex="1" />
+					</@formGroup>
+        <@formGroup>
+          <@button name='action_createProject' type='submit' tabIndex='2' title='#i18n{portal.util.labelCreate}' buttonIcon='plus' />
+					<@button name='view_manageProjects' type='submit' title='#i18n{portal.util.labelCancel}' buttonIcon='close' color='btn-secondary' />
+				</@formGroup>
+        </fieldset>
+    </@tform>
+	</@columns>
+</@row>
+
+  
