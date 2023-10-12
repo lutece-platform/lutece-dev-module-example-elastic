@@ -60,4 +60,11 @@
         <jiraProjectName>EXAMPLEELASTIC</jiraProjectName>
         <jiraComponentId></jiraComponentId>
     </properties>
+
+    <scm>
+        <connection>scm:git:https://github.com/lutece-platform/lutece-dev-module-example-elastic.git</connection>
+        <developerConnection>scm:git:https://github.com/lutece-platform/lutece-dev-module-example-elastic.git</developerConnection>
+        <url>https://github.com/lutece-platform/lutece-dev-module-example-elastic.git</url>
+    </scm>
+
 </project>
