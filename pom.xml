@@ -38,7 +38,7 @@
         <dependency>
             <groupId>fr.paris.lutece</groupId>
             <artifactId>lutece-core</artifactId>
-            <version>[6.0.0-SNAPSHOT,)</version>
+            <version>[6.0.0-SNAPSHOT,7.9.9)</version>
             <type>lutece-core</type>
         </dependency>
         <dependency>
@@ -58,7 +58,7 @@
     <properties>
         <componentName>example-elastic</componentName>
         <jiraProjectName>EXAMPLEELASTIC</jiraProjectName>
-        <jiraComponentId></jiraComponentId>
+        <jiraComponentId />
     </properties>
 
     <scm>
